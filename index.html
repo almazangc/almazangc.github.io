@@ -21,7 +21,7 @@
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">Gilbert Almazan</div>
+      <div class="logo">Profile Portfolio</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -38,20 +38,26 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="almazangc" />
+        <img src="./assets/profile/initial-pic1.png" alt="almazangc" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Gilbert Almazan</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <!-- <p class="section__text__p2">-title|role-</p> -->
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/viewable-document/almazan_cv.pdf')"
           >
-            Download CV
+            View CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/viewable-document/almazan_resume.pdf')"
+          >
+            View Resume
+          </button>
+          <button class="btn btn-color-2" onclick="toggleMenu(); location.href='#contact';">
             Contact Info
           </button>
         </div>
@@ -68,6 +74,8 @@
             class="icon"
             onclick="location.href='https://github.com/almazangc'"
           />
+          <img src="./assets/facebook.png" alt="My Facebook" class="icon"
+            onclick="location.href='https://www.facebook.com/gcalmazan/'" />
         </div>
       </div>
     </section>
@@ -75,13 +83,13 @@
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <!-- <div class="section__pic-container">
           <img
             src="./assets/about-pic.png"
             alt="Profile picture"
             class="about-pic"
           />
-        </div>
+        </div> -->
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -124,7 +132,7 @@
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
-        class="icon arrow"
+        class="icon arrow" 
         onclick="location.href='./#experience'"
       />
     </section>
@@ -344,7 +352,7 @@
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
-        class="icon arrow"
+        class="icon arrow" 
         onclick="location.href='./#contact'"
       />
     </section>
@@ -358,7 +366,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:gilbertalmazan61@gmail.com">gilbertalmazan61@gmail.com</a></p>
+          <p><a href="mailto:gilbertalmazan61@gmail.com">Email</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -367,6 +375,10 @@
             class="icon contact-icon"
           />
           <p><a href="https://www.linkedin.com/in/almazangc/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/messenger.png" alt="Messenger icon" class="icon contact-icon" />
+          <p><a href="https://m.me/gcalmazan">Messenger</a></p>
         </div>
       </div>
     </section>
@@ -381,7 +393,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Gilbert Almazan. All Rights Reserved.</p>
+      <p>Copyright &#169; 2024. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
