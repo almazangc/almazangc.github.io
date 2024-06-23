@@ -327,6 +327,18 @@ section {
   margin-bottom: 2rem;
 }
 
+.experience-sub-title-project-1 {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.experience-sub-title-project-2 {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: .7rem;
+  margin-bottom: 2rem;
+}
 .experience-details-container {
   display: flex;
   justify-content: center;
