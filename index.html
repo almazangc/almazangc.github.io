@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <div class="theme-toggle-container">
+      <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
     <nav id="desktop-nav">
-      <div class="logo">Viewing Portfolio...</div>
+      <div class="logo">Portfolio</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -39,45 +42,43 @@
 
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile/initial-pic1.png" alt="almazangc" />
+        <img src="./assets/profile/initial-pic1.png" alt="almazangc" loading="lazy" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Gilbert Almazan</h1>
-        <!-- <p class="section__text__p2">-title|role-</p> -->
+        <div class="terminal-hero">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">Terminal</span>
+          </div>
+          <div class="terminal-content">
+            <span class="prompt">$</span> Hello, I'm <span class="username">Gilbert Almazan</span><br>
+            <span class="prompt">$</span> <span class="role" id="roleText">Software Developer | Tech Enthusiast</span><br>
+            <span class="prompt">$</span> <span class="desc" id="descText">Welcome to my portfolio!</span>
+          </div>
+        </div>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/viewable-document/almazan_cv.pdf')"
-          >
-            View CV
-          </button>
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/viewable-document/almazan_resume.pdf')"
-          >
-            View Resume
-          </button>
-          <button class="btn btn-color-2" onclick="toggleMenu(); location.href='#contact';">
-            Contact Info
-          </button>
+          <button class="btn btn-color-2" onclick="window.open('./assets/viewable-document/almazan_cv.pdf')">View CV</button>
+          <button class="btn btn-color-2" onclick="window.open('./assets/viewable-document/almazan_resume.pdf')">View Resume</button>
+          <button class="btn btn-color-2" onclick="location.href='#contact';">Contact Info</button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/almazangc/'"/>
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/almazangc'"/>
-          <img 
-            src="./assets/facebook.png" 
-            alt="My Facebook" 
-            class="icon"
-            onclick="location.href='https://www.facebook.com/gcalmazan/'"/>
+          <a class="icon pill-icon" href="https://www.linkedin.com/in/almazangc/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-svg">
+              <path d="M4.98 3.5a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98ZM3 9h4v12H3zM9 9h3.8v1.9h.05c.53-.95 1.82-1.95 3.75-1.95 4 0 4.75 2.63 4.75 6.05V21H18v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z" />
+            </svg>
+          </a>
+          <a class="icon pill-icon" href="https://github.com/almazangc" aria-label="GitHub" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-svg">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.17-1.11-1.48-1.11-1.48-.91-.62.07-.6.07-.6 1 .07 1.53 1.04 1.53 1.04.9 1.53 2.37 1.09 2.95.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 7.5c.85.01 1.7.12 2.5.35 1.9-1.3 2.74-1.02 2.74-1.02.55 1.41.2 2.45.1 2.71.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+            </svg>
+          </a>
+          <a class="icon pill-icon" href="https://www.facebook.com/gcalmazan/" aria-label="Facebook" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-svg">
+              <path d="M13.5 10H16l.5-3h-3V5.5c0-.9.3-1.5 1.6-1.5H17V1.1C16.2 1 15 1 13.8 1 10.9 1 9 2.7 9 5.2V7H6v3h3v9h4.5v-9Z" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -85,311 +86,146 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <!-- <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div> -->
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>
-                Mobile Application Developer<br/>
-                Intern - (On Job Training)<br />
-                DOLE - GIP<br />
-              </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                BS in Computer Science<br />
-                Bachelor's Degree</p>
+      <div class="section-container about-grid">
+        <div class="about-summary">
+          <h3>Who I Am</h3>
+          <p>
+            Builder-minded developer who enjoys crafting resilient interfaces, wiring clean APIs, and keeping the
+            whole experience fast, readable, and accessible. I learn quickly, document what I find, and keep teams in
+            sync with concise updates.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Web UI</span>
+            <span class="chip">APIs</span>
+            <span class="chip">DX</span>
+            <span class="chip">Docs</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="details-container">
+            <h3>Experience</h3>
+            <p>Mobile App Developer — Intern<br/>DOLE - GIP</p>
+            <div class="pill-list">
+              <span class="pill">Android</span>
+              <span class="pill">Java</span>
+              <span class="pill">UI Flows</span>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              I've had the joy of completing programming project, and honing my skills as Java Developer.
-              I'm excited to bring my passion and learning mindset to contribute to innovative projects.
-              Excited to explore opportunities where I can contribute to a dynamic team aligning with the
-              organization's goals
-            </p>
+          <div class="details-container">
+            <h3>Education</h3>
+            <p>BS Computer Science<br/>Bachelor's Degree</p>
+            <div class="pill-list">
+              <span class="pill">Algorithms</span>
+              <span class="pill">Data Structures</span>
+              <span class="pill">Systems</span>
+            </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow" 
-        onclick="location.href='./#experience'"
-      />
     </section>
 
-    <!-- <section id="experience">
+    <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div 
-        class="about-containers" 
-        style="display: flex; flex-direction: row; justify-content: center;">
-          <div class="details-container" style="max-width: 500px;">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+      <div class="experience-grid tiles">
+          <div class="xp-card">
+            <p class="eyebrow">Core Stack</p>
+            <h3>Frontend Engineering</h3>
+            <p class="muted">HTML • CSS • JS • Responsive UI • Accessibility-first</p>
+            <div class="pill-list">
+              <span class="pill">Design Tokens</span>
+              <span class="pill">Performance</span>
+              <span class="pill">Testing</span>
             </div>
           </div>
-          <div class="details-container" style="max-width: 500px;">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+          <div class="xp-card">
+            <p class="eyebrow">Tooling</p>
+            <h3>Backend & Ops</h3>
+            <p class="muted">Node.js • Express • RESTful APIs • Git workflows</p>
+            <div class="pill-list">
+              <span class="pill">Routing</span>
+              <span class="pill">Logging</span>
+              <span class="pill">Auth-ready</span>
+            </div>
+          </div>
+          <div class="xp-card">
+            <p class="eyebrow">Growth</p>
+            <h3>Learning & Community</h3>
+            <p class="muted">Technical writing • Pair programming • Mentorship-ready</p>
+            <div class="pill-list">
+              <span class="pill">Docs</span>
+              <span class="pill">Walkthroughs</span>
+              <span class="pill">Feedback</span>
             </div>
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section> -->
+      </section>
 
-    <!-- <section id="projects">
-
-      <p class="section__text__p1">Browse My</p>
-      <h1 class="title">Projects</h1>
-
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+      <section id="projects">
+        <p class="section__text__p1">Browse My</p>
+        <h1 class="title">Projects</h1>
+        <div class="project-grid">
+          <div class="project-card">
+            <div class="project-top">
+              <h3>Sprout</h3>
+              <p class="muted">Habit tracking mobile app with guided flows and streaks.</p>
+              <div class="pill-list">
+                <span class="pill">Android</span>
+                <span class="pill">Java</span>
+                <span class="pill">UX</span>
+              </div>
             </div>
-            <h2 class="experience-sub-title-project-1">Sprout</h2>
-            <h3 class="experience-sub-title-project-2">Sprout</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/almazangc/Sprout'"
-              >
-                Github Repository
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://play.google.com/store/apps/details?id=com.habitdev.sprout'"
-              >
-                Download App
-              </button>
+            <div class="btn-container project-actions">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/almazangc/Sprout'">GitHub</button>
+              <button class="btn btn-color-2" onclick="location.href='https://play.google.com/store/apps/details?id=com.habitdev.sprout'">Play Store</button>
             </div>
           </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title-project-1">Sprout</h2>
-            <h3 class="experience-sub-title-project-2">Sprout</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/almazangc/Sprout'">
-                  Github Repository
-                </button>
-                <button class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://play.google.com/store/apps/details?id=com.habitdev.sprout'">
-                  Download App
-                </button>
+          <div class="project-card">
+            <div class="project-top">
+              <h3>Portfolio Terminal</h3>
+              <p class="muted">Terminal-inspired personal site with theme toggle and responsive nav.</p>
+              <div class="pill-list">
+                <span class="pill">HTML</span>
+                <span class="pill">CSS</span>
+                <span class="pill">JS</span>
               </div>
+            </div>
+            <div class="btn-container project-actions">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/almazangc'">Source</button>
+              <button class="btn btn-color-2" onclick="location.href='#profile'">Live</button>
+            </div>
           </div>
-          
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            </div>
-            <h2 class="experience-sub-title-project-1">Sprout</h2>
-            <h3 class="experience-sub-title-project-2">Sprout</h2>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/almazangc/Sprout'">
-                  Github Repository
-                </button>
-                <button class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://play.google.com/store/apps/details?id=com.habitdev.sprout'">
-                  Download App
-                </button>
+          <div class="project-card">
+            <div class="project-top">
+              <h3>API Starter</h3>
+              <p class="muted">Express starter with routing, logging, and auth-ready structure.</p>
+              <div class="pill-list">
+                <span class="pill">Node.js</span>
+                <span class="pill">Express</span>
+                <span class="pill">REST</span>
               </div>
+            </div>
+            <div class="btn-container project-actions">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/almazangc'">GitHub</button>
+              <button class="btn btn-color-2" onclick="location.href='#contact'">Contact</button>
+            </div>
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow" 
-        onclick="location.href='./#contact'"
-      />
-    </section> -->
+      </section>
 
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:gilbertalmazan61@gmail.com">Email</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a 
-              href="#" 
-              class="external-link"  
-              data-url="https://www.linkedin.com/in/almazangc/">
-                LinkedIn
-            </a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/messenger.png" alt="Messenger icon" class="icon contact-icon" />
-          <p>
-            <a 
-              href="#" 
-              class="external-link" 
-              data-url="https://m.me/gcalmazan">
-                Messenger
-            </a>
-          </p>
-        </div>
-      </div>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-color-2">Send Message</button>
+        <div id="formStatus"></div>
+      </form>
     </section>
 
     <footer>
